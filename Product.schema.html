@@ -1,0 +1,205 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>Config | Product</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="none" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Overview</a> |
+        <a href="javascript:window.history.back()">Back</a> |
+        <button id="toggle-example">View examples</button>
+        <br/>
+        <br/>
+        <h1>Product</h1>
+        
+        <div class="examples">
+            
+        </div>
+    </header>
+    <div id="container">
+        <div id="left-side">
+            <p><a href="Advancement.schema.html">Advancement</a></p><p><a href="AmmoModel.schema.html">AmmoModel</a></p><p><a href="Arena.schema.html">Arena</a></p><p><a href="BWTeamOptions.schema.html">BWTeamOptions</a></p><p><a href="BattleBar.schema.html">BattleBar</a></p><p><a href="BattleChat.schema.html">BattleChat</a></p><p><a href="BattleEffect.schema.html">BattleEffect</a></p><p><a href="BattleFirework.schema.html">BattleFirework</a></p><p><a href="BattleFireworkEffect.schema.html">BattleFireworkEffect</a></p><p><a href="BattleItemModel.schema.html">BattleItemModel</a></p><p><a href="BattleParticle.schema.html">BattleParticle</a></p><p><a href="BattlePotionEffect.schema.html">BattlePotionEffect</a></p><p><a href="BattleScoreboard.schema.html">BattleScoreboard</a></p><p><a href="BedWarOptions.schema.html">BedWarOptions</a></p><p><a href="Booster.schema.html">Booster</a></p><p><a href="Bullet.schema.html">Bullet</a></p><p><a href="CaptureTheFlagOptions.schema.html">CaptureTheFlagOptions</a></p><p><a href="Category.schema.html">Category</a></p><p><a href="Component.schema.html">Component</a></p><p><a href="DeathmatchOptions.schema.html">DeathmatchOptions</a></p><p><a href="FakeBlockEffect.schema.html">FakeBlockEffect</a></p><p><a href="GameOptions.schema.html">GameOptions</a></p><p><a href="GeneralConfig.schema.html">GeneralConfig</a></p><p><a href="GrenadeModel.schema.html">GrenadeModel</a></p><p><a href="Gui.schema.html">Gui</a></p><p><a href="GunModel.schema.html">GunModel</a></p><p><a href="ItemSkin.schema.html">ItemSkin</a></p><p><a href="Kit.schema.html">Kit</a></p><p><a href="MagazineModel.schema.html">MagazineModel</a></p><p><a href="Market.schema.html">Market</a></p><p><a href="MobGroup.schema.html">MobGroup</a></p><p><a href="MobRescueObjective.schema.html">MobRescueObjective</a></p><p><a href="MobRescueOptions.schema.html">MobRescueOptions</a></p><p><a href="Mode.schema.html">Mode</a></p><p><a href="PackageDetails.schema.html">PackageDetails</a></p><p><a href="Perk.schema.html">Perk</a></p><p><a href="PreparedItem.schema.html">PreparedItem</a></p><p><a href="Product.schema.html">Product</a></p><p><a href="Progression.schema.html">Progression</a></p><p><a href="Rollback.schema.html">Rollback</a></p><p><a href="ScopeModel.schema.html">ScopeModel</a></p><p><a href="SingleSkinItem.schema.html">SingleSkinItem</a></p><p><a href="SingleSkinWeapon.schema.html">SingleSkinWeapon</a></p><p><a href="SystemConfig.schema.html">SystemConfig</a></p><p><a href="TeamDeathmatchOptions.schema.html">TeamDeathmatchOptions</a></p><p><a href="WeaponModel.schema.html">WeaponModel</a></p><p><a href="WorldSettings.schema.html">WorldSettings</a></p>
+        </div>
+        <div id="right-side">
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+    <td>icon</td>
+    <td> <a href="PreparedItem.schema.html">PreparedItem</a></td>
+    <td>Product's icon</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>package_name</td>
+    <td> String</td>
+    <td>A nice name for the package icon.<br>This product is 'a package' when it gives player booster, perks, exp or items<br>(for items, <b>requires the amount of two or more</b>). You can read more<br>at the Market schema (option 'default_product_icon.package')<br>The icon for a package will be created automatically when no icon is set</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>package_material</td>
+    <td> Material</td>
+    <td>The material for the package icon<br><i>What is a package?</i> Read above (option 'package_name')</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>currency</td>
+    <td> CurrencyType</td>
+    <td>The currency to be used</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>price</td>
+    <td> double</td>
+    <td>The cost of this product</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>in_game_only</td>
+    <td> boolean</td>
+    <td>Make this product only available during the game</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>reserved_game_modes</td>
+    <td> List</td>
+    <td>Make this product only available during certain game modes<br>This option only takes effect if <b>in_game_only</b> set to <i>true</i><br>All game modes are non-case-sensitive</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.perform_commands</td>
+    <td> List</td>
+    <td>The commands to be performed by the console later<br>You can use placeholders here; they are parsed<br>from the buyer's info</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.give_perks</td>
+    <td> List</td>
+    <td>The perks to be given later</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.give_boosters</td>
+    <td> List</td>
+    <td>The boosters to be given later</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.give_items.vanilla</td>
+    <td> Map</td>
+    <td>The vanilla items to be given later</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.give_items.battle</td>
+    <td> Multimap</td>
+    <td>The Battle items to be given later</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.give_exp.vanilla</td>
+    <td> int</td>
+    <td>The vanilla exp to be given later</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>executions.give_exp.battle</td>
+    <td> long</td>
+    <td>The Battle exp to be given later</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>functions.on_purchase</td>
+    <td> List</td>
+    <td>Function to be called when a player purchases this product, and the transaction<br>has not been created (no money is taken, nothing is given to the player)<br>This function is very useful that allows you to change the cost. For example,<br>the cost can be reduced by half if the player has a specific rank. Or you can<br>make a 'tier cost' system that increase the cost each time the player purchases<br>so the first time is &#36;10, then &#36;20, &#36;50, &#36;100. etc<br>You can also reject the transaction by setting &#36;forbidden to `true`<br>Variables: &#36;price, &#36;currency, &#36;forbidden (modifiable)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>functions.on_purchased</td>
+    <td> List</td>
+    <td>Function to be called when a player purchased this product successfully<br>Variables: &#36;price, &#36;currency (read-only)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+
+            </table>
+        </div>
+    </div>
+    <footer>Powered by <a href="https://github.com/anhcraft/config">ConfigDoc</a></footer>
+    </body>
+
+</html>

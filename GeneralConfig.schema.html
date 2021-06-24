@@ -1,0 +1,545 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>Config | GeneralConfig</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="none" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Overview</a> |
+        <a href="javascript:window.history.back()">Back</a> |
+        <button id="toggle-example">View examples</button>
+        <br/>
+        <br/>
+        <h1>GeneralConfig</h1>
+        
+        <div class="examples">
+            
+        </div>
+    </header>
+    <div id="container">
+        <div id="left-side">
+            <p><a href="Advancement.schema.html">Advancement</a></p><p><a href="AmmoModel.schema.html">AmmoModel</a></p><p><a href="Arena.schema.html">Arena</a></p><p><a href="BWTeamOptions.schema.html">BWTeamOptions</a></p><p><a href="BattleBar.schema.html">BattleBar</a></p><p><a href="BattleChat.schema.html">BattleChat</a></p><p><a href="BattleEffect.schema.html">BattleEffect</a></p><p><a href="BattleFirework.schema.html">BattleFirework</a></p><p><a href="BattleFireworkEffect.schema.html">BattleFireworkEffect</a></p><p><a href="BattleItemModel.schema.html">BattleItemModel</a></p><p><a href="BattleParticle.schema.html">BattleParticle</a></p><p><a href="BattlePotionEffect.schema.html">BattlePotionEffect</a></p><p><a href="BattleScoreboard.schema.html">BattleScoreboard</a></p><p><a href="BedWarOptions.schema.html">BedWarOptions</a></p><p><a href="Booster.schema.html">Booster</a></p><p><a href="Bullet.schema.html">Bullet</a></p><p><a href="CaptureTheFlagOptions.schema.html">CaptureTheFlagOptions</a></p><p><a href="Category.schema.html">Category</a></p><p><a href="Component.schema.html">Component</a></p><p><a href="DeathmatchOptions.schema.html">DeathmatchOptions</a></p><p><a href="FakeBlockEffect.schema.html">FakeBlockEffect</a></p><p><a href="GameOptions.schema.html">GameOptions</a></p><p><a href="GeneralConfig.schema.html">GeneralConfig</a></p><p><a href="GrenadeModel.schema.html">GrenadeModel</a></p><p><a href="Gui.schema.html">Gui</a></p><p><a href="GunModel.schema.html">GunModel</a></p><p><a href="ItemSkin.schema.html">ItemSkin</a></p><p><a href="Kit.schema.html">Kit</a></p><p><a href="MagazineModel.schema.html">MagazineModel</a></p><p><a href="Market.schema.html">Market</a></p><p><a href="MobGroup.schema.html">MobGroup</a></p><p><a href="MobRescueObjective.schema.html">MobRescueObjective</a></p><p><a href="MobRescueOptions.schema.html">MobRescueOptions</a></p><p><a href="Mode.schema.html">Mode</a></p><p><a href="PackageDetails.schema.html">PackageDetails</a></p><p><a href="Perk.schema.html">Perk</a></p><p><a href="PreparedItem.schema.html">PreparedItem</a></p><p><a href="Product.schema.html">Product</a></p><p><a href="Progression.schema.html">Progression</a></p><p><a href="Rollback.schema.html">Rollback</a></p><p><a href="ScopeModel.schema.html">ScopeModel</a></p><p><a href="SingleSkinItem.schema.html">SingleSkinItem</a></p><p><a href="SingleSkinWeapon.schema.html">SingleSkinWeapon</a></p><p><a href="SystemConfig.schema.html">SystemConfig</a></p><p><a href="TeamDeathmatchOptions.schema.html">TeamDeathmatchOptions</a></p><p><a href="WeaponModel.schema.html">WeaponModel</a></p><p><a href="WorldSettings.schema.html">WorldSettings</a></p>
+        </div>
+        <div id="right-side">
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+    <td>locale</td>
+    <td> String <b>not-null</b></td>
+    <td>The locale file used for messages and texts<br>Available: en_us.yml, vi.yml</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>date_format.long_form</td>
+    <td> String <b>not-null</b></td>
+    <td>The format of date in long-form (contains day, month, year, etc)<br>Read more: <a href='https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html'>Java Date Format</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>date_format.short_form.hours</td>
+    <td> String <b>not-null</b></td>
+    <td>The format of date in short-form. The maximum time unit is <b>hour</b>.<br>Read more: <a href='https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html'>Java Date Format</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>date_format.short_form.minutes</td>
+    <td> String <b>not-null</b></td>
+    <td>The format of date in short-form. The maximum time unit is <b>minute</b>.<br>Read more: <a href='https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html'>Java Date Format</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>date_format.short_form.seconds</td>
+    <td> String <b>not-null</b></td>
+    <td>The format of date in short-form. The maximum time unit is <b>second</b>.<br>Read more: <a href='https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html'>Java Date Format</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>level_system.exp_to_level_formula</td>
+    <td> String <b>not-null</b></td>
+    <td>The formula for converting X exp to Y level</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>level_system.level_to_exp_formula</td>
+    <td> String <b>not-null</b></td>
+    <td>The formula for converting X level to Y exp</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>default_scoreboard</td>
+    <td> <a href="BattleScoreboard.schema.html">BattleScoreboard</a></td>
+    <td>The default scoreboard settings</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>default_chat</td>
+    <td> <a href="BattleChat.schema.html">BattleChat</a></td>
+    <td>The default chat settings</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.type</td>
+    <td> StorageType <b>not-null</b></td>
+    <td>The type of storage<br>Available: file, mysql</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.file.data_path</td>
+    <td> String</td>
+    <td>The path to the directory where we should store data</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.mysql.hostname</td>
+    <td> String</td>
+    <td>The IP (or host name) of MySQL server</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.mysql.port</td>
+    <td> int</td>
+    <td>The port MySQL server listens to</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.mysql.database</td>
+    <td> String</td>
+    <td>The MySQL database</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.mysql.username</td>
+    <td> String</td>
+    <td>The MySQL user's name</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.mysql.password</td>
+    <td> String</td>
+    <td>The MySQL user's password</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>storage.mysql.datasource_properties</td>
+    <td> ConfigurationSection</td>
+    <td>The external configuration (for HikariCP's data source)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.anti_death_drops</td>
+    <td> boolean</td>
+    <td>This option prevents player items and exp from dropping</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.resource_pack.enabled</td>
+    <td> boolean</td>
+    <td>Enabled force resource pack on join</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.resource_pack.custom_url</td>
+    <td> String</td>
+    <td>Custom resource pack URL</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.heal_on_game_start</td>
+    <td> boolean</td>
+    <td>Enable this option to heal all players when game started</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.heal_on_game_end</td>
+    <td> boolean</td>
+    <td>Enable this option to heal all players after end game</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.default_speed.walk</td>
+    <td> double</td>
+    <td>The walking speed<br>-1 <= speed <= 1</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.default_speed.fly</td>
+    <td> double</td>
+    <td>The flying speed<br>-1 <= speed <= 1</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.region_partition_size</td>
+    <td> int</td>
+    <td>The maximum size for each region partition</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.entity_track_min_distance</td>
+    <td> double</td>
+    <td>The minimum distance to ensure a tracked entity has moved</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.blood_effect.enabled</td>
+    <td> boolean</td>
+    <td>Should we show the blood effects</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.blood_effect.particles_ratio</td>
+    <td> double</td>
+    <td>The amount of blood particles will be spawned per each health point</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.material_hardness</td>
+    <td> Map</td>
+    <td>The material of blocks</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>misc.entity_hardness</td>
+    <td> Map</td>
+    <td>The base hardness of entities (without equipment)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>bungeecord.enabled</td>
+    <td> boolean</td>
+    <td>Should we enable the Bungeecord support?</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>bungeecord.lobby_servers</td>
+    <td> List</td>
+    <td>The lobby servers.<br>If the player can't connect to the first one, the second will be chosen, and so on<br>until there is no server left</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>bungeecord.reconnect_tries_per_server</td>
+    <td> int</td>
+    <td>Here you can specify how many times does the player can try to reconnect. If exceed,<br>the next server in the given list will be chosen.</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>bungeecord.connection_delay</td>
+    <td> long</td>
+    <td>The delayed time between two connections per player</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>control.gun_shoot</td>
+    <td> MouseClick</td>
+    <td>The type of mouse click for shooting gun</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>control.gun_zoom</td>
+    <td> MouseClick</td>
+    <td>The type of mouse click for zooming in (with scope attached to gun)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>control.grenade_throw</td>
+    <td> MouseClick</td>
+    <td>The type of mouse click for throwing grenade</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>control.auto_reload_gun</td>
+    <td> boolean</td>
+    <td>Automatically reload guns ammunition when needed</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>in_game_economy.currency.name</td>
+    <td> String</td>
+    <td>The name of the currency that used in-game</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>in_game_economy.currency.format</td>
+    <td> String</td>
+    <td>The price format (contains the symbol and the cost)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>in_game_economy.init_balance</td>
+    <td> double</td>
+    <td>The initial balance (given on starting a game)</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>join_sign.dynamic_lines</td>
+    <td> List</td>
+    <td>The text on join signs.<br>It will be updated frequently (based on the option `update_time`)<br>You can use placeholders for arena and game.</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>join_sign.update_time</td>
+    <td> long</td>
+    <td>Time for each update to the text on join signs (in ticks)<br>Minimum are 20 ticks; set to lower will disable the task<br>thus make the text always fixed.</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>backpack.sounds.on_add_success</td>
+    <td> BattleSound</td>
+    <td>Sound to be played when an item is put into the backpack successfully</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>backpack.sounds.on_add_failure</td>
+    <td> BattleSound</td>
+    <td>Sound to be played when a <b>wrong</b> item is put into the backpack</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>backpack.sounds.on_remove</td>
+    <td> BattleSound</td>
+    <td>Sound to be played when the player takes out item from backpack</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>radio.message_format</td>
+    <td> String</td>
+    <td>Radio message format</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>custom_items.medical_kit.health_bonus</td>
+    <td> int</td>
+    <td>Additional health give to the player</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>custom_items.medical_kit.use_sound</td>
+    <td> BattleSound</td>
+    <td>Sound to be played when using the medical kit</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>custom_items.adrenaline_shot.use_sound</td>
+    <td> BattleSound</td>
+    <td>Sound to be played when using the adrenaline shot</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+
+            </table>
+        </div>
+    </div>
+    <footer>Powered by <a href="https://github.com/anhcraft/config">ConfigDoc</a></footer>
+    </body>
+
+</html>

@@ -1,0 +1,117 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <title>Config | Component</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="none" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Overview</a> |
+        <a href="javascript:window.history.back()">Back</a> |
+        <button id="toggle-example">View examples</button>
+        <br/>
+        <br/>
+        <h1>Component</h1>
+        
+        <div class="examples">
+            
+        </div>
+    </header>
+    <div id="container">
+        <div id="left-side">
+            <p><a href="Advancement.schema.html">Advancement</a></p><p><a href="AmmoModel.schema.html">AmmoModel</a></p><p><a href="Arena.schema.html">Arena</a></p><p><a href="BWTeamOptions.schema.html">BWTeamOptions</a></p><p><a href="BattleBar.schema.html">BattleBar</a></p><p><a href="BattleChat.schema.html">BattleChat</a></p><p><a href="BattleEffect.schema.html">BattleEffect</a></p><p><a href="BattleFirework.schema.html">BattleFirework</a></p><p><a href="BattleFireworkEffect.schema.html">BattleFireworkEffect</a></p><p><a href="BattleItemModel.schema.html">BattleItemModel</a></p><p><a href="BattleParticle.schema.html">BattleParticle</a></p><p><a href="BattlePotionEffect.schema.html">BattlePotionEffect</a></p><p><a href="BattleScoreboard.schema.html">BattleScoreboard</a></p><p><a href="BedWarOptions.schema.html">BedWarOptions</a></p><p><a href="Booster.schema.html">Booster</a></p><p><a href="Bullet.schema.html">Bullet</a></p><p><a href="CaptureTheFlagOptions.schema.html">CaptureTheFlagOptions</a></p><p><a href="Category.schema.html">Category</a></p><p><a href="Component.schema.html">Component</a></p><p><a href="DeathmatchOptions.schema.html">DeathmatchOptions</a></p><p><a href="FakeBlockEffect.schema.html">FakeBlockEffect</a></p><p><a href="GameOptions.schema.html">GameOptions</a></p><p><a href="GeneralConfig.schema.html">GeneralConfig</a></p><p><a href="GrenadeModel.schema.html">GrenadeModel</a></p><p><a href="Gui.schema.html">Gui</a></p><p><a href="GunModel.schema.html">GunModel</a></p><p><a href="ItemSkin.schema.html">ItemSkin</a></p><p><a href="Kit.schema.html">Kit</a></p><p><a href="MagazineModel.schema.html">MagazineModel</a></p><p><a href="Market.schema.html">Market</a></p><p><a href="MobGroup.schema.html">MobGroup</a></p><p><a href="MobRescueObjective.schema.html">MobRescueObjective</a></p><p><a href="MobRescueOptions.schema.html">MobRescueOptions</a></p><p><a href="Mode.schema.html">Mode</a></p><p><a href="PackageDetails.schema.html">PackageDetails</a></p><p><a href="Perk.schema.html">Perk</a></p><p><a href="PreparedItem.schema.html">PreparedItem</a></p><p><a href="Product.schema.html">Product</a></p><p><a href="Progression.schema.html">Progression</a></p><p><a href="Rollback.schema.html">Rollback</a></p><p><a href="ScopeModel.schema.html">ScopeModel</a></p><p><a href="SingleSkinItem.schema.html">SingleSkinItem</a></p><p><a href="SingleSkinWeapon.schema.html">SingleSkinWeapon</a></p><p><a href="SystemConfig.schema.html">SystemConfig</a></p><p><a href="TeamDeathmatchOptions.schema.html">TeamDeathmatchOptions</a></p><p><a href="WeaponModel.schema.html">WeaponModel</a></p><p><a href="WorldSettings.schema.html">WorldSettings</a></p>
+        </div>
+        <div id="right-side">
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+    <td>positions</td>
+    <td> List <b>not-null</b></td>
+    <td>List of slots belong to this component</td>
+    <td>
+        <div class="examples">
+            <pre>positions: 1 -> 9; 1 -> 3</pre><pre>positions: 3 -> 5; 4</pre><pre>positions:
+ - 1 ; 2
+ - 1 ; 2 -> 4</pre>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>item</td>
+    <td> <a href="PreparedItem.schema.html">PreparedItem</a></td>
+    <td>The item to set in the GUI<br>All slots belong to this component will have the same item</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>functions.on_init</td>
+    <td> List</td>
+    <td>The function that gets called when one slot of this component is initialized<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>functions.on_click</td>
+    <td> List</td>
+    <td>The function that gets called when one slot of this component is clicked<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>functions.on_render</td>
+    <td> List</td>
+    <td>The function that gets called when one slot of this component is going to be rendered<br>Set &#36;cancel_render to `true` to prevent this action; `false` is set by default<br>It is not recommended to do any modifications to the item on that slot, you would be better<br>to look at on_rendered, which is called <b>after</b> the rendering has done.<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>functions.on_rendered</td>
+    <td> List</td>
+    <td>The function that gets called when one slot of this component was rendered successfully<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>pagination</td>
+    <td> String</td>
+    <td>Pagination that support multiple items to display in this component<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+
+            </table>
+        </div>
+    </div>
+    <footer>Powered by <a href="https://github.com/anhcraft/config">ConfigDoc</a></footer>
+    </body>
+
+</html>
