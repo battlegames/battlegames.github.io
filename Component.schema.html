@@ -60,47 +60,51 @@
 <tr>
     <td>functions.on_init</td>
     <td> List</td>
-    <td>The function that gets called when one slot of this component is initialized<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>The function that gets called when one slot of this component is initialized<br>Read more: <a href="https://github.com/battlegames/Battle-Hub/wiki/GUI">https://github.com/battlegames/Battle-Hub/wiki/GUI</a></td>
     <td>
         <div class="examples">
-            
+            <pre>on_init:
+ - Common:CopyCurrentSlot("window" "positionOfThisSlot")</pre>
         </div>
     </td>
 </tr>
 <tr>
     <td>functions.on_click</td>
     <td> List</td>
-    <td>The function that gets called when one slot of this component is clicked<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>The function that gets called when one slot of this component is clicked<br>Read more: <a href="https://github.com/battlegames/Battle-Hub/wiki/GUI">https://github.com/battlegames/Battle-Hub/wiki/GUI</a></td>
     <td>
         <div class="examples">
-            
+            <pre>on_click:
+  - Common:CancelEvent() # Prevent steal items</pre>
         </div>
     </td>
 </tr>
 <tr>
     <td>functions.on_render</td>
     <td> List</td>
-    <td>The function that gets called when one slot of this component is going to be rendered<br>Set &#36;cancel_render to `true` to prevent this action; `false` is set by default<br>It is not recommended to do any modifications to the item on that slot, you would be better<br>to look at on_rendered, which is called <b>after</b> the rendering has done.<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>The function that gets called when one slot of this component is going to be rendered<br>Set &#36;cancel_render to `true` to prevent this action; `false` is set by default<br>It is not recommended to do any modifications to the item on that slot, you would be better<br>to look at on_rendered, which is called <b>after</b> the rendering has done.<br>Read more: <a href="https://github.com/battlegames/Battle-Hub/wiki/GUI">https://github.com/battlegames/Battle-Hub/wiki/GUI</a></td>
     <td>
         <div class="examples">
-            
+            <pre>on_render:
+  - Cache:SetBool("_cancel_render_" true) ? _slot_ == 27</pre>
         </div>
     </td>
 </tr>
 <tr>
     <td>functions.on_rendered</td>
     <td> List</td>
-    <td>The function that gets called when one slot of this component was rendered successfully<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>The function that gets called when one slot of this component was rendered successfully<br>Read more: <a href="https://github.com/battlegames/Battle-Hub/wiki/GUI">https://github.com/battlegames/Battle-Hub/wiki/GUI</a></td>
     <td>
         <div class="examples">
-            
+            <pre>on_rendered:
+  - Common:SetItemFromData("window" "value" &#36;_window_positionOfThisSlot "not-null")</pre>
         </div>
     </td>
 </tr>
 <tr>
     <td>pagination</td>
     <td> String</td>
-    <td>Pagination that support multiple items to display in this component<br>Read more: <a href="https://wiki.anhcraft.dev/battle/gui">https://wiki.anhcraft.dev/battle/gui</a></td>
+    <td>Pagination that support multiple items to display in this component<br>Read more: <a href="https://github.com/battlegames/Battle-Hub/wiki/GUI">https://github.com/battlegames/Battle-Hub/wiki/GUI</a></td>
     <td>
         <div class="examples">
             
