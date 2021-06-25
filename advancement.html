@@ -1,0 +1,89 @@
+<!Doctype html><!-- Created by (c) Code Editor ( http://anhcraft.dev/editor/ ) --><html class=""><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  padding: 25px 50px;
+}
+
+input,
+button,
+textarea {
+  display: block;
+  border: 3px #3380d3 solid;
+  border-radius: 15px;
+  outline: none;
+  width: 700px;
+  padding: 6px 12px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #4ca6d3;
+  color: #fff;
+}
+
+#result {
+  height: 450px;
+}
+
+#progressions {
+  border: 3px #3380d3 solid;
+  border-radius: 15px;
+  width: 700px;
+  min-height: 150px;
+  padding: 15px 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-height: 800px;
+  overflow: auto;
+}
+
+.progression {
+  margin-left: 15px;
+}
+
+.progression input,
+.progression button,
+.progression textarea {
+  width: 150px;
+  display: inline;
+  margin-right: 10px;
+}
+</style></head><body><h1>BattleGames - Advancement Generator</h1><input type="text" id="id" placeholder="Id" /><input type="text" id="type" placeholder="Type"><input type="text" id="icon" placeholder="Icon" /><input type="text" id="name" placeholder="Name" /><textarea id="description" placeholder="Description"></textarea><input type="text" id="inherit-progress" placeholder="Inherit progress (true/false)" /><br /><button id="add-progression">Add progression</button><div id="progressions"></div><button id="generate">Generate</button><textarea id="result"></textarea><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script type="text/javascript">$("#add-progression").click(function() {
+  $("#progressions").append("<div class='progression'><input type='text' class='progression-amount' placeholder='Amount' /><input type='text' class='progression-reward-exp' placeholder='Reward: Exp' /><input type='text' class='progression-reward-money' placeholder='Reward: Money' /></div>");
+});
+$("#generate").click(function() {
+  var id = $("#id").val();
+  var type = $("#type").val();
+  var icon = $("#icon").val();
+  var name = $("#name").val();
+  var desc = $("#description").val().trim().split("\n");
+  var inherit = $("#inherit-progress").val();
+  var desc_ = "[]\n";
+  if (desc.length > 0 && desc[0].length > 0) {
+    desc_ = "\n";
+    for (var i = 0; i < desc.length; i++) {
+      desc_ += "    - " + desc[i] + "\n";
+    }
+  }
+  var res = id + ":\n" + "  type: " + type + "\n" + "  name: " + name + "\n" + "  description: " + desc_ + "  icon: " + icon + "\n";
+  if (inherit.length > 0) {
+    res += "  inherit_progress: " + (inherit.trim() == "true" ? "true" : "false") + "\n";
+  }
+  var progression = "";
+  var i = 0;
+  var progressions = document.getElementsByClassName("progression");
+  for (var i = 0; i < progressions.length; i++) {
+    var a = progressions[i].querySelector(".progression-amount").value;
+    var b = progressions[i].querySelector(".progression-reward-exp").value;
+    var c = progressions[i].querySelector(".progression-reward-money").value;
+    progression += "    '" + i + "':\n" + "      amount: " + a + "\n      reward:\n        exp: " + b + "\n" + "        money: " + c + "\n";
+  }
+  if (i > 0) res += "  progression:\n" + progression;
+  else res += "  progression: {}";
+  $("#result").val(res);
+});
+</script></body></html>
