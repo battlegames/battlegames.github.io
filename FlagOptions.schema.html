@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Config | SingleSkinWeapon</title>
+    <title>Config | FlagOptions</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="none" />
@@ -17,7 +17,7 @@
         <button id="toggle-example">View examples</button>
         <br/>
         <br/>
-        <h1>SingleSkinWeapon</h1>
+        <h1>FlagOptions</h1>
         
         <div class="examples">
             
@@ -36,9 +36,9 @@
                     <th>Examples</th>
                 </tr>
                 <tr>
-    <td>skin</td>
-    <td> <a href="ItemSkin.schema.html">ItemSkin</a> <b>not-null</b></td>
-    <td>Set the item's skin</td>
+    <td>location</td>
+    <td> String <b>not-null</b></td>
+    <td>The location of the flag</td>
     <td>
         <div class="examples">
             
@@ -46,9 +46,59 @@
     </td>
 </tr>
 <tr>
-    <td>name</td>
-    <td> String</td>
-    <td>Give a name for the item</td>
+    <td>display_name.valid</td>
+    <td> String <b>not-null</b></td>
+    <td>The name to be displayed when the flag state is valid</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>display_name.invalid</td>
+    <td> String <b>not-null</b></td>
+    <td>The name to be displayed when the flag state is invalid</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>display_name.neutral</td>
+    <td> String <b>not-null</b></td>
+    <td>The name to be displayed when the flag state is neutral</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>max_health</td>
+    <td> int <b>not-null</b></td>
+    <td>The maximum health points of the flag</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>start_capture_sound</td>
+    <td> BattleSound</td>
+    <td>The sound on starting the capture</td>
+    <td>
+        <div class="examples">
+            
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>stop_capture_sound</td>
+    <td> BattleSound</td>
+    <td>The sound on stopping the capture</td>
     <td>
         <div class="examples">
             
